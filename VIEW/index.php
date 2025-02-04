@@ -1,6 +1,6 @@
 <?php
 
-    include("MODEL\BD\connect.php");
+    include("../MODEL/connect.php");
 
 ?>
 
@@ -24,7 +24,7 @@
             <h4>PREÇO</h4>
             <input type="text" name="preco" id="preco" placeholder="Digite o preço do produto: ">
             
-            <button class="btn btn-success" type="submit" name="cadastro" id="bot" value="cadastrar">CADASTRAR PRODUTO</button>
+            <input type="submit" class="btn btn-success" name="cadastrar" id="bot" value="cadastrar">
         </form>
     </div>
 </body>
