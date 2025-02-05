@@ -1,8 +1,9 @@
 <?php
 
-    include("connect.php");
-    include("nav-bar.php");
+    include "connect.php";
+    include "nav-bar.php";
 
+    
 ?>
 
 <!DOCTYPE html>
