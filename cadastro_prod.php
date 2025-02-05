@@ -3,10 +3,10 @@
 include("connect.php");
 
 if(isset($_POST['cadastrar']));
-$nome = $_POST['nome'];
-$tipo = $_POST['tipo'];
-$quantidade = $_POST['quantidade'];
-$preco = $_POST['preco']; 
+$nome = mysqli_real_escape_string($conn, trim($_POST['nome']));
+$tipo = mysqli_real_escape_string($conn, trim($_POST['tipo']));
+$quantidade = mysqli_real_escape_string($conn, trim($_POST['quantidade']));
+$preco = mysqli_real_escape_string($conn, trim($_POST['preco'])); 
 
 $sql = "INSERT INTO produtos(nome,tipo,quantidade_estoque,preco) VALUES('$nome', '$tipo','$quantidade', '$preco')";
 
