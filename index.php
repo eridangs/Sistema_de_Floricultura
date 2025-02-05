@@ -1,6 +1,6 @@
 <?php
 
-    include("C:\xampp\htdocs\CRUD_BASIC\Sistema_de_Floricultura\MODEL\BD\connect.php");
+    include("connect.php");
 
 ?>
 
@@ -18,13 +18,13 @@
             <h4>NOME</h4>
             <input type="text" name="nome" id="nome" placeholder="Digite o nome do produto: ">
             <h4>TIPO</h4>            
-            <input type="text" name="tipo" id="tipo" placeholder="Digite o tipo do produto: ">
+            <input type="text" name="tipo" id="tipo" placeholder="Digite o tipo do produto (Flores, Plantas, Buquês e Arranjos, Complementos): ">
             <h4>QUANTIDADE</h4>            
             <input type="text" name="quantidade" id="quantidade" placeholder="Digite a quantidade do produto no estoque: ">
             <h4>PREÇO</h4>
             <input type="text" name="preco" id="preco" placeholder="Digite o preço do produto: ">
             
-            <button class="btn btn-success" type="submit" name="cadastro" id="bot" value="cadastro">CADASTRAR PRODUTO</button>
+            <button class="btn btn-success" type="submit" name="cadastro" value="cadastrar">CADASTRAR PRODUTO</button>
         </form>
     </div>
 </body>
