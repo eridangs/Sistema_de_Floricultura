@@ -3,11 +3,11 @@
 include("connect.php");
 
 if(isset($_POST['cadastrar']));
-$nome = mysqli_real_escape_string($conn, trim($_POST['nome']));
+$nome_cli = mysqli_real_escape_string($conn, trim($_POST['nome_cli']));
 $telefone = mysqli_real_escape_string($conn, trim($_POST['telefone']));
 $cpf = mysqli_real_escape_string($conn, trim($_POST['cpf'])); 
 
-$sql = "INSERT INTO cliente(nome,telefone,cpf) VALUES('$nome', '$telefone','$cpf')";
+$sql = "INSERT INTO cliente(nome_cli,telefone,cpf) VALUES('$nome_cli', '$telefone','$cpf')";
 
 $result = mysqli_query($conn,$sql);
 

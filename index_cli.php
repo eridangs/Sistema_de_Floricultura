@@ -10,11 +10,11 @@
     <div class="p-5 d-flex align-items-center bg-primary text-white rounded">
         <form method="POST" action="cadastro_cli.php">
             <h4>NOME</h4>
-            <input type="text" name="nome" id="nome" placeholder="Digite o seu nome: ">
+            <input type="text" name="nome_cli" id="nome_cli" placeholder="Digite o seu nome: ">
             <h4>TELEFONE</h4>            
-            <input type="text" name="telefone" id="telefone" placeholder="Digite o  número do seu telefone: ">
+            <input type="text" name="telefone" id="telefone" placeholder="Digite o número do seu telefone: ">
             <h4>CPF</h4>            
-            <input type="char" name="cpf" id="cpf" placeholder="Digite o  número do seu cpf: ">      
+            <input type="char" name="cpf" id="cpf" placeholder="Digite o número do seu cpf: ">      
             
             <button class="btn btn-success" type="submit" name="cadastrar" value="cadastrar">CADASTRAR</button>
         </form>
