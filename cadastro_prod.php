@@ -13,7 +13,8 @@ $consulta = "INSERT INTO produtos(nome,tipo,quantidade_estoque,preco) VALUES('$n
 $resultado_consulta = mysqli_query($conn,$consulta);
 
 if($resultado_consulta){
-    echo 'Cadastrado com sucesso';
+    echo "Cadastro finalizado com sucesso";
+    header ('location:index.php');
 }else{
     echo 'Erro ao cadastrar';
 }

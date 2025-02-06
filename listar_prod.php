@@ -36,12 +36,14 @@
                     echo '
                         <tr>
                             <th>'.$id.'</th>    
-                            <th>'.$nome.'</th>    
-                            <th>'.$tipo.'</th>    
-                            <th>'.$quantidade.'</th>    
-                            <th>'.$preco.'</th>
-                            <th><button><a href="editar_prod.php?id='.$id.'">Editar</a></button></th>
-                            <th><button><a href="excluir_prod.php?id='.$id.'">Excluir</a></button></th>
+                            <td>'.$nome.'</td>    
+                            <td>'.$tipo.'</td>    
+                            <td>'.$quantidade.'</td>    
+                            <td>'.$preco.'</td>
+                            <td>
+                            <button class="btn btn-primary"><a class="text-light" href="editar_prod.php?ideditado='.$id.'">Editar</a></button>
+                            <button class="btn btn-danger"><a class="text-light" href="excluir_prod.php?idexcluido='.$id.'">Excluir</a></button>
+                            </td>
                         </tr>    
                     ';
                 }
