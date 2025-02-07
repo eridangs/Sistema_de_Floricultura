@@ -1,3 +1,10 @@
+<?php
+
+    include "connect.php";
+    include "nav-bar.php";
+
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
