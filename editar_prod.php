@@ -11,7 +11,7 @@ if(isset($_GET['ideditado'])){
 
     $produto = mysqli_fetch_assoc($resultado_consulta); 
     // var_dump($produto);
-    echo $produto['quantidade_estoque'];
+    // echo $produto['quantidade_estoque'];
 
 }else{
     header('location:listar.php');
@@ -59,7 +59,7 @@ if(isset($_POST['editar'])){
             </div>
             <div class="form-group">
                 <h4>QUANTIDADE</h4>            
-                <input type="text" class="form-control" name="quantidade" id="quantidade"  placeholder="" value=<?php echo $produto['quantidade_estoque']; ?>>
+                <input type="text" class="form-control" name="quantidade_estoque" id="quantidade_estoque"  placeholder="" value=<?php echo $produto['quantidade_estoque']; ?>>
             </div>
             <div class="form-group">
                 <h4>PREÇO</h4>
