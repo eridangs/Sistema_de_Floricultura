@@ -1,5 +1,8 @@
 <?php
-require 'connect.php';
+
+include "../connect/connect.php";
+include "../nav-bar.php";
+
 
 if(isset($_GET['ideditado'])){
 
@@ -14,7 +17,7 @@ if(isset($_GET['ideditado'])){
     // echo $produto['quantidade_estoque'];
 
 }else{
-    header('location:listar.php');
+    header('location:listar_prod.php');
 }
 
 

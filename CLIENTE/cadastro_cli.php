@@ -1,6 +1,6 @@
 <?php
 
-include("connect.php");
+include("../connect/connect.php");
 
 if(isset($_POST['cadastrar']));
 $nome_cli = mysqli_real_escape_string($conn, trim($_POST['nome_cli']));
@@ -13,7 +13,7 @@ $result = mysqli_query($conn,$sql);
 
 if($result){
     echo "Cadastro finalizado com sucesso";
-    header ('location:index_cli.php');
+    header ('location:area_cli.php');
 }else{
     echo 'Erro ao cadastrar';
 }
