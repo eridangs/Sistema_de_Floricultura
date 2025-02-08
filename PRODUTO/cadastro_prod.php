@@ -13,8 +13,8 @@
     $resultado_consulta = mysqli_query($conn,$consulta);
 
     if($resultado_consulta){
-        echo "Cadastro finalizado com sucesso";
-        header ('location:area_prod.php');
+        echo ' <script> alert("Produto cadastrado com sucesso!") </script> ';
+        echo "<meta http-equiv='refresh' content='0.3;URL=./listar_prod.php'/> ";
     }else{
         echo 'Erro ao cadastrar';
     }

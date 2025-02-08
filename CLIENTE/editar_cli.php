@@ -23,12 +23,13 @@ if(isset($_POST['editar'])){
     $telefone = $_POST['telefone'];
     $cpf = $_POST['cpf'];
 
-    $consulta = "UPDATE cliente SET nome='$nome', telefone= '$telefone', cpf= '$cpf' WHERE id_clie= $id";
+    $consulta2 = "UPDATE cliente SET nome='$nome', telefone= '$telefone', cpf= '$cpf' WHERE id_clie= $id";
 
-    $resultado_consulta = mysqli_query($conn,$consulta);
+    $resultado_consulta2 = mysqli_query($conn,$consulta2);
 
-    if($resultado_consulta){
-        header ('location:listar_cli.php');
+    if($resultado_consulta2){
+        echo ' <script> alert("Cliente editado com sucesso!") </script> ';
+        echo "<meta http-equiv='refresh' content='0.3;URL=./listar_cli.php'/> ";
     }else{
         echo 'Erro ao editar cliente';
     }
@@ -44,21 +45,24 @@ if(isset($_POST['editar'])){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Editar Produto</h1>
+    <h1>Editar Cliente</h1>
 
     <div class="p-5 d-flex align-items-center bg-primary text-white rounded">
         <form method="POST">
+
             <div class="form-group">
                 <h4>NOME</h4>
                 <input type="text" class="form-control" name="nome_cli" id="nome_cli" placeholder="Editar nome: " value=<?php echo $cliente['nome_cli']; ?>>
             </div>
+
             <div class="form-group">
                 <h4>TELEFONE</h4>            
                 <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Editar telefone: " value=<?php echo $cliente['telefone']; ?>>
             </div>
+
             <div class="form-group">
                 <h4>CPF</h4>            
-                <input type="char" class="form-control" name="cpf" id="cpf" placeholder="Editar cpf: " value=<?php echo $cliente['cpf']; ?>>      
+                <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Editar cpf: " value=<?php echo $cliente['cpf']; ?>>      
             </div>
             
             <button class="btn btn-danger" type="reset" name="cancelar">Cancelar</button>

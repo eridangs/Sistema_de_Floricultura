@@ -3,13 +3,12 @@
     include "../connect/connect.php";
 
     if(isset($_POST['cadastrar']));
-    $id_clie = mysqli_real_escape_string($conn, trim($_POST['id_clie']));;
-  
+    $id_clie = mysqli_real_escape_string($conn, trim($_POST['id_clie']));
+    $id_prod = mysqli_real_escape_string($conn, trim($_POST['id_prod']));;
     $data_pedi = mysqli_real_escape_string($conn, trim($_POST['data']));
     $situacao = mysqli_real_escape_string($conn, trim($_POST['situacao']));
-    $total = 1;
 
-    $consulta = "INSERT INTO pedido(id_clie,data_pedi,situacao) VALUES('$id_clie', '$data_pedi','$situacao')";
+    $consulta = "INSERT INTO pedido(id_clie,id_prod,data_pedi,situacao) VALUES($id_clie,$id_prod, '$data_pedi','$situacao')";
 
     $resultado_consulta = mysqli_query($conn,$consulta);
 

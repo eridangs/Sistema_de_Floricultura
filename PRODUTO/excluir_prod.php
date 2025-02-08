@@ -15,7 +15,4 @@ if($resultado_consulta){
      echo 'Erro ao excluir produto';
 }
 
- 
-
-
 ?>

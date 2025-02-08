@@ -13,8 +13,6 @@ if(isset($_GET['ideditado'])){
     $resultado_consulta = mysqli_query($conn, $consulta);
 
     $produto = mysqli_fetch_assoc($resultado_consulta); 
-    // var_dump($produto);
-    // echo $produto['quantidade_estoque'];
 
 }else{
     header('location:listar_prod.php');
@@ -32,7 +30,8 @@ if(isset($_POST['editar'])){
     $resultado_consulta = mysqli_query($conn,$consulta);
 
     if($resultado_consulta){
-        header ('location:listar_prod.php');
+        echo ' <script> alert("Produto editado com sucesso!") </script> ';
+        echo "<meta http-equiv='refresh' content='0.3;URL=./listar_prod.php'/> ";
     }else{
         echo 'Erro ao editar produto';
     }
@@ -54,7 +53,7 @@ if(isset($_POST['editar'])){
         <form method="POST">
             <div class="form-group">
                 <h4>NOME</h4>
-                <input type="text" class="form-control" name="nome" id="nome"  placeholder="" value=<?php echo $produto['nome']; ?>>
+                <input type="text" class="form-control" name="nome" id="nome" placeholder="" value=<?php echo $produto['nome']; ?>>
             </div>
             <div class="form-group">
                 <h4>TIPO</h4>            

@@ -5,6 +5,7 @@
     
     $consulta = "SELECT * FROM pedido";
     $resultado_consulta = mysqli_query($conn, $consulta);
+
 ?>
 <html lang="pt-br">
 <head>
@@ -19,6 +20,7 @@
         <tr>
             <td scope="col">ID</td>
             <td scope="col">ID CLIENTE</td>
+            <td scope="col">ID PRODUTO</td>
             <td scope="col">DATA</td>
             <td scope="col">SITUAÇÃO</td>
             <td scope="col">OPÇÕES</td>
@@ -28,17 +30,19 @@
                 while($linhasretornadas = mysqli_fetch_assoc($resultado_consulta)){
                     $id = $linhasretornadas['id_pedi'];
                     $id_clie = $linhasretornadas['id_clie'];
+                    $id_prod = $linhasretornadas['id_prod'];
                     $data = $linhasretornadas['data_pedi'];
                     $situacao = $linhasretornadas['situacao'];
                     echo '
                         <tr>
                             <th>'.$id.'</th>    
-                            <th>'.$id_clie.'</th>    
+                            <td>'.$id_clie.'</td>    
+                            <td>'.$id_prod.'</td>    
                             <td>'.$data.'</td>    
                             <td>'.$situacao.'</td>
                             <td>
-                            <button class="btn btn-primary"><a class="text-light" href="editar_ped.php?id='.$id.'">Editar</a></button>
-                            <button class="btn btn-danger"><a class="text-light" href="excluir_ped.php?id='.$id.'">Excluir</a></button>
+                            <button class="btn btn-primary"><a class="text-light" href="editar_ped.php?idped='.$id.'">Editar</a></button>
+                            <button class="btn btn-danger"><a class="text-light" href="excluir_ped.php?idped='.$id.'">Excluir</a></button>
                             </td>
                         </tr>    
                     ';

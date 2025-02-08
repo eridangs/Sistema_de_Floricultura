@@ -12,8 +12,8 @@ $sql = "INSERT INTO cliente(nome_cli,telefone,cpf) VALUES('$nome_cli', '$telefon
 $result = mysqli_query($conn,$sql);
 
 if($result){
-    echo "Cadastro finalizado com sucesso";
-    header ('location:area_cli.php');
+    echo ' <script> alert("Cliente cadastrado com sucesso!") </script> ';
+    echo "<meta http-equiv='refresh' content='0.3;URL=./listar_cli.php'/> ";
 }else{
     echo 'Erro ao cadastrar';
 }

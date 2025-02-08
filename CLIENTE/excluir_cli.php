@@ -10,7 +10,7 @@ $consulta = "DELETE FROM cliente WHERE id_clie = $id";
 $resultado_consulta = mysqli_query($conn, $consulta);
 
 if($resultado_consulta){
-    header ('location:listar_prod.php');
+    header ('location:listar_cli.php');
 }else{
-     echo 'Erro ao excluir produto';
+     echo 'Erro ao excluir cliente';
 }
