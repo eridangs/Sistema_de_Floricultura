@@ -13,11 +13,9 @@ if(isset($_GET['ideditado'])){
     $resultado_consulta = mysqli_query($conn, $consulta);
 
     $produto = mysqli_fetch_assoc($resultado_consulta); 
-
 }else{
     header('location:listar_prod.php');
 }
-
 
 if(isset($_POST['editar'])){
     $nome = $_POST['nome'];

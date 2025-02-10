@@ -17,13 +17,12 @@ if(isset($_GET['idcli'])){
     header('location:listar_cli.php');
 }
 
-
 if(isset($_POST['editar'])){
     $nome = $_POST['nome_cli'];
     $telefone = $_POST['telefone'];
     $cpf = $_POST['cpf'];
 
-    $consulta2 = "UPDATE cliente SET nome='$nome', telefone= '$telefone', cpf= '$cpf' WHERE id_clie= $id";
+    $consulta2 = "UPDATE cliente SET nome_cli='$nome', telefone= '$telefone', cpf= '$cpf' WHERE id_clie= $id";
 
     $resultado_consulta2 = mysqli_query($conn,$consulta2);
 

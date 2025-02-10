@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'sistema_floricultura');
+$conn = new mysqli('localhost', 'root', '', 'sistemafloricultura');
 if (!$conn) {
     die(mysqli_error($conn));
 };

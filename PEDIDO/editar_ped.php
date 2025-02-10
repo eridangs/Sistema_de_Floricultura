@@ -35,7 +35,7 @@ if(isset($_POST['editar'])){
 
     if($resultado_consulta){
         echo ' <script> alert("Pedido editado com sucesso!") </script> ';
-        echo "<meta http-equiv='refresh' content='0.3;URL=./listar_prod.php'/> ";
+        echo "<meta http-equiv='refresh' content='0.3;URL=./listar_ped.php'/> ";
     }else{
         echo 'Erro ao editar pedido';
     }
